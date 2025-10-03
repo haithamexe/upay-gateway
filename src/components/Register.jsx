@@ -62,7 +62,7 @@ const Register = () => {
   return (
     <div className="flex flex-col gap-2 ">
       <h1 className="text-xl font-bold w-full text-center">
-        Create an Account As a Merchant
+        Apply for an Account
       </h1>
       <label className="text-sm text-gray-600">
         By signing up, you agree to our Terms & Conditions and Privacy Policy.
