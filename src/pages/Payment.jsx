@@ -64,7 +64,7 @@ const Payment = () => {
 
   const [paymentType, setPaymentType] = useState("qi-card");
 
-  const [otpVerified, setOtpVerified] = useState(false);
+  const [otpVerified, setOtpVerified] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
