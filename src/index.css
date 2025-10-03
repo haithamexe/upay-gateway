@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "spartan";
+  src: url("/fonts/LeagueSpartan-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 @theme {
   --color-primary: #3d5bbe;
   --color-secondary: #dbe4f0;
   --color-tertiary: #002fff;
   --color-accent: #2b2b2b;
   --color-bg: #f3f4f6;
+
+  --font-spartan: "spartan";
 }
 
 @layer components {

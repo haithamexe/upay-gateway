@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 
 function Section({ children }) {
@@ -14,6 +14,7 @@ function Section({ children }) {
 
 const Payment = () => {
   const { paymentParams } = useParams();
+  const navigate = useNavigate();
 
   const images = [
     "/images/qi-card.png",
@@ -202,7 +203,7 @@ const Payment = () => {
                 ))}
               </div>
             </div>
-            <h1 className="text-lg font-bold text-gray-900">
+            <h1 className="text-lg font-bold text-gray-900 border-b-2 pb-2 mb-2 border-blue-300">
               {paymentType
                 .split("-")
                 .join(" ")
