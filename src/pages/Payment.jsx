@@ -13,7 +13,7 @@ function Section({ children }) {
 }
 
 const Payment = () => {
-  const paymentParams = useParams();
+  const { paymentParams } = useParams();
   const navigate = useNavigate();
 
   const images = [
