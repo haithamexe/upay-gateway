@@ -24,7 +24,7 @@ const Payment = () => {
       const fetchPaymentData = async () => {
         try {
           const response = await axios.get(
-            `https://restaurant-api.taco5k.site/api/admin/gatewayintegration/${paymentParams}`
+            `https://restaurant-api.taco5k.site/api/admin/gatewayintegration${paymentParams}`
           );
           setPaymentData(response?.data);
           console.log("Payment Data:", response?.data);
