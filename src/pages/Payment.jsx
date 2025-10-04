@@ -387,7 +387,17 @@ const Payment = () => {
           </section>
           <section className="mt-2">
             <Section>
-              <button className="w-full bg-blue-600 text-white p-3 rounded-md text-lg font-bold hover:bg-blue-700 transition cursor-pointer">
+              <button
+                className="w-full bg-blue-600 text-white p-3 rounded-md text-lg font-bold hover:bg-blue-700 transition cursor-pointer"
+                onClick={() =>
+                  setTimeout(
+                    () =>
+                      (window.location.href =
+                        "https://upay-e-commerce.vercel.app/"),
+                    500
+                  )
+                }
+              >
                 Pay Now
               </button>
             </Section>
