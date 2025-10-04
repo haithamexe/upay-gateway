@@ -17,24 +17,24 @@ const Payment = () => {
   const [paymentData, setPaymentData] = useState(null);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (paymentParams) {
-  //     alert(paymentParams);
-  //     const fetchPaymentData = async () => {
-  //       try {
-  //         const response = await fetch(
-  //           `https://restaurant-api.taco5k.site/api/admin/gatewayintegration${paymentParams}`
-  //         );
-  //         const data = await response.json();
-  //         console.log("Fetched Payment Data:", data);
-  //         setPaymentData(data);
-  //       } catch (error) {
-  //         console.error("Error fetching payment data:", error);
-  //       }
-  //     };
-  //     fetchPaymentData();
-  //   }
-  // }, [paymentParams]);
+  useEffect(() => {
+    if (paymentParams) {
+      alert(paymentParams);
+      const fetchPaymentData = async () => {
+        try {
+          const response = await fetch(
+            `https://restaurant-api.taco5k.site/api/admin/gatewayintegration${paymentParams}`
+          );
+          const data = await response.json();
+          console.log("Fetched Payment Data:", data);
+          setPaymentData(data);
+        } catch (error) {
+          console.error("Error fetching payment data:", error);
+        }
+      };
+      fetchPaymentData();
+    }
+  }, [paymentParams]);
 
   const images = [
     "/images/qi-card.png",
@@ -43,36 +43,36 @@ const Payment = () => {
     "/images/mastercard.png",
   ];
 
-  // const products = [
-  //   {
-  //     image: "https://i.imgur.com/DMQHGA0.jpeg",
-  //     name: "Mid-Century Modern Wooden Dining Table",
-  //     description:
-  //       "A beautiful wooden dining table with a mid-century modern design.",
-  //     price: "$299.99",
-  //   },
-  //   {
-  //     image: "https://i.imgur.com/6wkyyIN.jpeg",
-  //     name: "Modern Elegance Teal Armchair",
-  //     description:
-  //       "A stylish teal armchair that adds a touch of elegance to any room.",
-  //     price: "$99.99",
-  //   },
-  //   {
-  //     image: "https://i.imgur.com/3oXNBst.jpeg",
-  //     name: "Modern Minimalist Workstation Setup",
-  //     description:
-  //       "A sleek and modern workstation setup that enhances productivity.",
-  //     price: "$49.99",
-  //   },
-  //   {
-  //     image: "https://i.imgur.com/3dU0m72.jpeg",
-  //     name: "Modern Ergonomic Office Chair",
-  //     description:
-  //       "A comfortable and contemporary office chair designed for productivity.",
-  //     price: "$399.99",
-  //   },
-  // ];
+  const products = [
+    {
+      image: "https://i.imgur.com/DMQHGA0.jpeg",
+      name: "Mid-Century Modern Wooden Dining Table",
+      description:
+        "A beautiful wooden dining table with a mid-century modern design.",
+      price: "$299.99",
+    },
+    {
+      image: "https://i.imgur.com/6wkyyIN.jpeg",
+      name: "Modern Elegance Teal Armchair",
+      description:
+        "A stylish teal armchair that adds a touch of elegance to any room.",
+      price: "$99.99",
+    },
+    {
+      image: "https://i.imgur.com/3oXNBst.jpeg",
+      name: "Modern Minimalist Workstation Setup",
+      description:
+        "A sleek and modern workstation setup that enhances productivity.",
+      price: "$49.99",
+    },
+    {
+      image: "https://i.imgur.com/3dU0m72.jpeg",
+      name: "Modern Ergonomic Office Chair",
+      description:
+        "A comfortable and contemporary office chair designed for productivity.",
+      price: "$399.99",
+    },
+  ];
 
   // const products = paymentData?.items;
 
