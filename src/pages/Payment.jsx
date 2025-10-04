@@ -17,10 +17,9 @@ const Payment = () => {
   const [paymentData, setPaymentData] = useState(null);
   const navigate = useNavigate();
 
-  console.log("Payment Params:", paymentParams);
-
   useEffect(() => {
     if (paymentParams) {
+      alert(paymentParams);
       const fetchPaymentData = async () => {
         try {
           const response = await fetch(
@@ -75,7 +74,7 @@ const Payment = () => {
   //   },
   // ];
 
-  const products = paymentData?.items;
+  // const products = paymentData?.items;
 
   const [formData, setFormData] = useState({
     cardNumber: "",
