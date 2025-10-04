@@ -22,16 +22,15 @@ const Payment = () => {
   useEffect(() => {
     const fetchPaymentData = async () => {
       try {
-        const response = await axios.get(
+        const response = await fetch(
           `https://restaurant-api.taco5k.site/api/admin/gatewayintegration/${paymentParams}`
         );
-        console.log("Payment Data:", response.data);
-        setPaymentData(response.data);
+        const data = await response.json();
+        setPaymentData(data);
       } catch (error) {
         console.error("Error fetching payment data:", error);
       }
     };
-
     fetchPaymentData();
   }, [paymentParams]);
 
