@@ -20,18 +20,21 @@ const Payment = () => {
   console.log("Payment Params:", paymentParams);
 
   useEffect(() => {
-    const fetchPaymentData = async () => {
-      try {
-        const response = await fetch(
-          `https://restaurant-api.taco5k.site/api/admin/gatewayintegration/${paymentParams}`
-        );
-        const data = await response.json();
-        setPaymentData(data);
-      } catch (error) {
-        console.error("Error fetching payment data:", error);
-      }
-    };
-    fetchPaymentData();
+    if (paymentParams) {
+      const fetchPaymentData = async () => {
+        try {
+          const response = await fetch(
+            `https://restaurant-api.taco5k.site/api/admin/gatewayintegration/${paymentParams}`
+          );
+          const data = await response.json();
+          setPaymentData(data);
+        } catch (error) {
+          console.error("Error fetching payment data:", error);
+        }
+      };
+
+      fetchPaymentData();
+    }
   }, [paymentParams]);
 
   const images = [
@@ -72,7 +75,7 @@ const Payment = () => {
   //   },
   // ];
 
-  const products = paymentData;
+  const products = paymentData.items;
 
   const [formData, setFormData] = useState({
     cardNumber: "",
