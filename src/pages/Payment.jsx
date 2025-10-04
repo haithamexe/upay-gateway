@@ -35,6 +35,8 @@ const Payment = () => {
     }
   }, [paymentParams]);
 
+  console.log("Payment Data:", paymentData);
+
   const images = [
     "/images/qi-card.png",
     "/images/zain cash.png",
