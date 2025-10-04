@@ -27,6 +27,7 @@ const Payment = () => {
             `https://restaurant-api.taco5k.site/api/admin/gatewayintegration/${paymentParams}`
           );
           const data = await response.json();
+          console.log("Fetched Payment Data:", data);
           setPaymentData(data);
         } catch (error) {
           console.error("Error fetching payment data:", error);
@@ -75,7 +76,7 @@ const Payment = () => {
   //   },
   // ];
 
-  const products = paymentData.items;
+  const products = paymentData?.items;
 
   const [formData, setFormData] = useState({
     cardNumber: "",
