@@ -19,7 +19,6 @@ const Payment = () => {
 
   useEffect(() => {
     if (paymentParams) {
-      alert(paymentParams);
       const fetchPaymentData = async () => {
         try {
           const response = await fetch(
