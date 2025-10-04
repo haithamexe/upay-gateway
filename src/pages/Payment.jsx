@@ -22,7 +22,7 @@ const Payment = () => {
       const fetchPaymentData = async () => {
         try {
           const response = await fetch(
-            `https://restaurant-api.taco5k.site/api/admin/gatewayintegration${paymentParams}`
+            `https://restaurant-api.taco5k.site/api/admin/gatewayintegration/${paymentParams}`
           );
           const data = await response.json();
           console.log("Fetched Payment Data:", data);
